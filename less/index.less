@@ -86,7 +86,7 @@ html{
 		.margin-mixin;
 
 		nav {
-			max-width: 100%;
+			max-width: 80%;
 			.flexbox-mixin;
 		
 			a {
@@ -134,12 +134,23 @@ html{
 			.margin-mixin;
 			justify-content: center;
 
+			@media (max-width: 500px){
+				flex-direction: column;
+				flex-wrap: wrap;
+				margin: 0px;
+
+			}
+
 			.why {
 				text-align: center;
 				font-size: 20px;
 				.border-mixin;
 				margin: 10px 5%;
 				width: 40%;
+
+				@media (max-width: 500px){
+					margin:0px;
+				}
 				
 				.why-headline {
 					font-size: 40px;
@@ -227,6 +238,11 @@ html{
 				ul > li {
 					list-style-type: disc;
 					margin-left: 6%;
+
+					@media (max-width: 500px){
+						margin-left: 15px;
+						list-style-type: none;
+					}
 				}
 			}
 			
