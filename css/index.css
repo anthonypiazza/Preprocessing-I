@@ -134,3 +134,86 @@ html,
 body {
   height: 100%;
 }
+html {
+  font-family: 'Roboto';
+  background-color: silver;
+}
+html header {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  margin: 20px 10%;
+}
+html header nav {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+html header nav a {
+  margin-top: 35px;
+  padding: 0px 5%;
+  font-size: 20px;
+  margin: 20px 10%;
+}
+html body .profile-general {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  margin: 20px 10%;
+}
+html body .profile-general .profile-photo {
+  margin: 20px 10%;
+  border: 5px solid black;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+html body .profile-general .profile-photo img {
+  width: 300px;
+}
+html body .profile-general .profile-info {
+  margin: 20px 10%;
+  border: 5px solid black;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+html body .intro-skills {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+html body .intro-skills .why {
+  text-align: center;
+  font-size: 20px;
+  background-color: #f5f5dc;
+  margin: 20px 10%;
+}
+html body .intro-skills .why .why-text {
+  margin: 20px 10%;
+}
+html body .intro-skills .skills {
+  background-color: #f5f5dc;
+  margin: 20px 10%;
+  font-size: 20px;
+}
+html body .intro-skills .skills .skills-headline {
+  text-align: center;
+}
+html body .work {
+  margin: 20px 10%;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+html body .work .work-headline {
+  text-align: center;
+}
