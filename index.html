@@ -1,19 +1,109 @@
 <!doctype html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>My Resume</title>
+    <title>Anthony Piazza Resume</title>
 
-  <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css">
 
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
-</head>
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  
+  <header>
+    <nav>
+      <a>Home</a>
+      <a>About</a>
+      <a>Portfolio</a>
+      <a>Contact</a>
+    </nav>
+  </header>
 
-<body>
-  <h1>My Resume</h1>
-</body>
+  <body>
+    <section class="profile-general">
+      <div class="profile-photo">
+        <img src="/imgs/headshot.png" alt="Headshot-Profile">
+      </div>
+      <div class="profile-info">  
+          <div class="name">
+            <h1>Anthony Piazza</h1>
+          </div>
+          <div class="title">
+            <p>Full Stack Web Developer</p>
+          </div>
+      </div>
+    </section>
+
+    <section class="intro-skills">
+      
+      <div class="why">
+        <div class="why-headline">
+           <h2>Why Hire Me?</h2>
+        </div>
+        <div class="why-text">
+           <p>I am enrolled in Lambda school!</p>
+        </div>
+      </div>
+      
+      <div class="skills">
+        <div class="skills-headline">
+          <h2>Skills</h2>
+        </div>
+        <div class="skills-list">
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Advanced CSS</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="work">
+      <h2>Professional Experience</h2>
+      <div class="work-job-1">
+        <h3>Data Sentry, LLC. - <span>Technical Intern</span></h3>
+          <ul>
+            <li>Project #1: Assistant Director for the 2018 Global Cyber Security Financial Summit, where 70+ Nigerian bankers attended talks on how to secure their digital banking practices.</li>
+            <li>Project #2: Built a 12-server data center rack; configured for remote access via VMware.</li>
+          </ul>
+      </div>   
+      <div class="work-job-2">
+        <h3>KKSS, LLC. - <span>General Freelance</span></h3>
+          <ul>
+            <li>Developed company website and performed site maintenance; registered SSL with site via GoDaddy.</li>
+            <li>Prospected and generated staffing leads with cold-calls throughout the United States.</li>
+          </ul>
+      </div>   
+    </section>
+
+    <section class="contact">
+      <div class="inner medium">
+        <h2>Get in touch</h2>
+        <form method="post" action="#"></form>
+          <div class="fields">
+            <div class="field half">
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name" value="" />
+            </div>
+            <div class="field half">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" value="" />
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea name="message" id="message" rows="6"></textarea>
+            </div>
+          </div>
+          <ul class="actions special">
+            <li><input type="submit" name="submit" id="submit" value="Send Message" /></li>
+          </ul>
+        </form>
+      </div>
+    </section>
+  </body> 
 </html>

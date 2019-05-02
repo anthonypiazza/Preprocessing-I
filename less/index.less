@@ -1,9 +1,28 @@
 // Is this working?
+//VARIABLES
+@font-family: 'Roboto';
+@container-color: #f5f5dc;
+
+//MIXINS
+.margin-mixin() {
+	margin: 20px 10%;
+}
+
+.flexbox-mixin() {
+	display: flex;
+	justify-content: space-around;
+	align-content: center;
+	align-items: center;
+}
+
+.border-mixin() {
+	border: 5px solid #f5f5dc;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -54,6 +73,185 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
 
+//HEADER CSS
+html{
+	font-family: @font-family;
+	background-color: silver;
+
+	header {
+		.flexbox-mixin;
+		.margin-mixin;
+
+		nav {
+			max-width: 80%;
+			.flexbox-mixin;
+		
+			a {
+				margin-top: 35px;
+				padding: 0px 5%;
+				font-size: 20px;
+				.margin-mixin;
+			}
+		}
+	}
+
+	body {
+		margin: 0px 20%;
+		.profile-general {
+			.flexbox-mixin;
+			.margin-mixin;
+			
+
+			.profile-photo {
+				.flexbox-mixin;
+				.border-mixin;
+				
+				img {
+					width:300px;
+				}
+			}
+
+			.profile-info {
+				display: flex;
+				flex-direction: column;
+				background-color: @container-color;
+				padding: 40px 5%;
+
+				.name {
+					display: block;
+					font-size: 40px;
+					font-weight: bold;
+					margin-bottom: 30px;
+				}
+			}
+		}
+
+		.intro-skills {
+			.flexbox-mixin;
+			.margin-mixin;
+			justify-content: center;
+
+			@media (max-width: 500px){
+				flex-direction: column;
+				flex-wrap: wrap;
+				margin: 0px;
+
+			}
+
+			.why {
+				text-align: center;
+				font-size: 20px;
+				.border-mixin;
+				margin: 10px 5%;
+				width: 40%;
+
+				@media (max-width: 500px){
+					margin:0px;
+				}
+				
+				.why-headline {
+					font-size: 40px;
+					font-family: @font-family;
+					font-weight: bold;
+					text-decoration: underline;
+				}
+
+				.why-text{
+					margin-top: 20px;
+					margin-bottom: 20px;
+				}
+			}
+		
+			.skills {
+				.border-mixin;
+				width: 50%;
+				font-size: 20px;
+
+				.skills-headline {
+					text-align: center;
+					font-size: 40px;
+					font-family: @font-family;
+					font-weight: bold;
+					text-decoration: underline;
+				}
+
+				.skills-list {
+					width: 100%;
+
+					ul > li {
+						margin-left: 6%;
+						padding: 10px 0%;
+						list-style-type: disc;
+					}
+				}
+			}
+		}
+
+		.work {
+			.margin-mixin;
+			.flexbox-mixin;
+			flex-direction: column;
+			.border-mixin;
+
+			h2 {
+				font-size: 40px;
+				font-family: @font-family;
+				font-weight: bold;
+				text-decoration: underline;
+				margin-bottom: 20px;
+			}
+
+			.work-job-1 {
+				margin-bottom: 40px;
+				line-height: 1.4;
+
+				h3 {
+					text-decoration: underline;
+					
+					span {
+						font-style: italic;
+					}
+				}
+
+				ul > li {
+					list-style-type: disc;
+					margin-left: 6%;
+				}
+			}
+
+			.work-job-2 {
+				margin-bottom: 20px;
+				width: 100%;
+				line-height: 1.4;
+
+				h3 {
+					text-decoration: underline;
+					
+					span {
+						font-style: italic;
+					}
+				}
+
+				ul > li {
+					list-style-type: disc;
+					margin-left: 6%;
+
+					@media (max-width: 500px){
+						margin-left: 15px;
+						list-style-type: none;
+					}
+				}
+			}
+			
+
+		}	
+
+		.contact {
+			.margin-mixin;
+			.flexbox-mixin;
+		}
+	}
+}
